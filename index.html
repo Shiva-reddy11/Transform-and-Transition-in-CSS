@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .md{
+            border: 1px solid;
+            padding: 30px;
+            background-color: rgb(225, 228, 230);
+        }
+        .color1{
+            color: pink;
+        }
+        .color2{
+            color: green;
+        }
+        .item1{
+            border: 1px solid;
+            height: 30px;
+            width: 300px;
+            position: relative;
+            left: 35px;
+            bottom:40px;
+            border-radius: 3px;
+            background-color: rgb(123, 124, 125);
+            color: white;
+            font-size: 20px;
+        }
+        .content{
+            border:none;
+            height: 150px;
+            width: 150px; 
+            font-size: 23px;
+            text-align: center;
+            background-color: aqua;
+            position: relative;
+            left: 450px;
+            bottom: 400px;
+        }
+         input:checked~.content{
+           transform: none;
+        }
+        #item1:checked~.content{
+            transform: rotate(10deg);
+        }
+        #item2:checked~.content{
+            transform: rotate(45deg);
+        }
+        #item3:checked~.content{
+            transform: rotateX(45deg);
+        }
+        #item4:checked~.content{
+            transform: rotate(125deg);
+        }
+        #item5:checked~.content{
+            transform: rotate(100deg);
+        }
+        #item6:checked~.content{
+            transform: scale(2,3);
+        }
+        input:hover~.item1{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body> 
+   
+    <div class="md">
+       
+            <input type="radio" name="name"  style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">none</span> ;</div>
+                    
+             <input id="item1" type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">rotate(10deg)</span> ;</div>
+            <input id=item2 type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">rotate(45deg)</span> ;</div>
+
+            <input id="item3" type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">rotateX(45deg)</span> ;</div>
+
+            <input id="item4" type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">rotate(100deg)</span> ;</div>
+
+            <input id="item5" type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">rotate(45deg)</span> ;</div>
+              
+            <input id="item6" type="radio" name="name" style="height: 3em; width: 20px;">
+                <div class="item1"><span class="color1">transform</span> : <span class="color2">Scale (2,3)</span> ;</div>
+
+
+             <div class="content">
+                   See what different transform values does with this blue DIV element. 
+                </div>   
+                <div class="item123"></div>                     
+    </div>
+</body>
+</html>
